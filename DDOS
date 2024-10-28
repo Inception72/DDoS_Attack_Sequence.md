@@ -1,0 +1,13 @@
+sequenceDiagram
+Participant BotNet
+Participant Webserver
+Participant Firewall
+Participant Target
+
+BotNet--> Webserver: Attacks Webserver
+BotNet--> Firewall: Goes to firewall first, firewall attempting to block out any spam IP or malacious TCP information
+Webserver--> Firewall: If firewall can't hold up Webserver is overloaded and taken down
+BotNet--> Webserver: Sends information for as long as "user" can/needs (Server remains down until then)
+
+
+    
